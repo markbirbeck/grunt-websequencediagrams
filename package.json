@@ -21,6 +21,7 @@
       "url": "https://github.com/markbirbeck/grunt-websequencediagrams/blob/master/LICENSE-MIT"
     }
   ],
+  "main": "tasks/websequencediagrams",
   "engines": {
     "node": ">= 0.8.0"
   },
