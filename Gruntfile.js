@@ -33,7 +33,33 @@ module.exports = function(grunt) {
       default_options: {
         options: {
         },
-        files: { },
+        files: {
+          'tmp/default.png': ['test/fixtures/sequence.uml'],
+        },
+      },
+      style_napkin_options: {
+        options: {
+          style: 'napkin'
+        },
+        files: {
+          'tmp/default-napkin.png': ['test/fixtures/sequence.uml'],
+        },
+      },
+      outputType_svg_options: {
+        options: {
+          outputType: 'svg'
+        },
+        files: {
+          'tmp/default.svg': ['test/fixtures/sequence.uml'],
+        },
+      },
+      outputType_pdf_options: {
+        options: {
+          outputType: 'pdf'
+        },
+        files: {
+          'tmp/default.pdf': ['test/fixtures/sequence.uml'],
+        },
       },
     },
 

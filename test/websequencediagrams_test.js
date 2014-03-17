@@ -30,7 +30,36 @@ exports.websequencediagrams = {
   default_options: function(test) {
     test.expect(1);
 
-    test.ok(true);
+    var actual = grunt.file.read('tmp/default.png');
+    var expected = grunt.file.read('test/expected/default.png');
+    test.equal(actual, expected, 'should generate a PNG by default.');
+
+    test.done();
+  },
+  style_napkin_options: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/default-napkin.png');
+    var expected = grunt.file.read('test/expected/default-napkin.png');
+    test.equal(actual, expected, 'should generate a PNG using the \'napkin\' style.');
+
+    test.done();
+  },
+  outputType_svg_options: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/default.svg');
+    var expected = grunt.file.read('test/expected/default.svg');
+    test.equal(actual, expected, 'should generate an SVG.');
+
+    test.done();
+  },
+  outputType_pdf_options: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/default.pdf');
+    var expected = grunt.file.read('test/expected/default.pdf');
+    test.equal(actual, expected, 'should generate an PDF.');
 
     test.done();
   },
