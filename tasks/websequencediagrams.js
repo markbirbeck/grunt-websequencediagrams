@@ -8,6 +8,9 @@
 
 'use strict';
 
+var wsd = require('websequencediagrams');
+var fs = require('fs');
+
 module.exports = function(grunt) {
 
   // Please see the Grunt documentation for more information regarding task
@@ -16,9 +19,12 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('websequencediagrams', 'Grunt plugin to allow UML sequence diagrams to be created, using WebSequenceDiagram.com.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      punctuation: '.',
-      separator: ', '
+      outputType: 'png',
+      style: 'modern-blue'
     });
+
+    // Get a handle to the "done" function.
+    var done = this.async();
 
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
@@ -34,16 +40,25 @@ module.exports = function(grunt) {
       }).map(function(filepath) {
         // Read file source.
         return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+      });
 
-      // Handle options.
-      src += options.punctuation;
+      wsd.diagram(
+        src,
+        options.style,
+        options.outputType,
+        function(err, buf/*, typ*/){
+          if (err){
+            console.error(err);
+            done(false);
+          } else {
+            // Write the destination file.
+            grunt.file.write(f.dest, buf);
 
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
-
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
+            // Print a success message.
+            grunt.log.writeln('File "' + f.dest + '" created.');
+            done(true);
+          }
+        });
     });
   });
 

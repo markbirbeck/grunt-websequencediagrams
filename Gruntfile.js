@@ -34,16 +34,31 @@ module.exports = function(grunt) {
         options: {
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123'],
+          'tmp/default.png': ['test/fixtures/sequence.uml'],
         },
       },
-      custom_options: {
+      style_napkin_options: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!',
+          style: 'napkin'
         },
         files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
+          'tmp/default-napkin.png': ['test/fixtures/sequence.uml'],
+        },
+      },
+      outputType_svg_options: {
+        options: {
+          outputType: 'svg'
+        },
+        files: {
+          'tmp/default.svg': ['test/fixtures/sequence.uml'],
+        },
+      },
+      outputType_pdf_options: {
+        options: {
+          outputType: 'pdf'
+        },
+        files: {
+          'tmp/default.pdf': ['test/fixtures/sequence.uml'],
         },
       },
     },
