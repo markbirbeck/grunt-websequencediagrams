@@ -107,4 +107,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 All of the hard word is done by [Joe Hildebrand](https://github.com/hildjj)'s [websequencediagrams](https://www.npmjs.org/package/websequencediagrams) module. This module is simply a thin wrapper around it to make it Gruntable.
 
 ## Release History
-_(Nothing yet)_
+2014-03-17 (v0.2.0)
+
+* Initial release.
