@@ -71,8 +71,10 @@ In this example, the default options are used to create a PNG image using the 'm
 grunt.initConfig({
   websequencediagrams: {
     options: {},
-    files: {
-      'doc/default.png': ['doc/sequence.uml'],
+    your_target: {
+      files: {
+        'doc/default.png': ['doc/sequence.uml'],
+      },
     },
   },
 });
@@ -90,8 +92,10 @@ grunt.initConfig({
       outputType: 'svg',
       style: 'napkin'
     },
-    files: {
-      'doc/default.svg': ['doc/sequence.uml'],
+    your_target: {
+      files: {
+        'doc/default.svg': ['doc/sequence.uml'],
+      },
     },
   },
 });
