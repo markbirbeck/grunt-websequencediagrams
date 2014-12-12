@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 
     // Get a handle to the "done" function.
     var done = this.async();
+    var counter = this.files.length;
 
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
@@ -56,7 +57,10 @@ module.exports = function(grunt) {
 
             // Print a success message.
             grunt.log.writeln('File "' + f.dest + '" created.');
-            done(true);
+            if (--counter === 0) {
+              grunt.verbose.writeln('Processed all files.');
+              done(true);
+            }
           }
         });
     });
