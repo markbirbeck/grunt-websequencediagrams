@@ -45,6 +45,14 @@ module.exports = function(grunt) {
           'tmp/default-napkin.png': ['test/fixtures/sequence.uml'],
         },
       },
+      multiple_files: {
+        options: {
+        },
+        files: {
+          'tmp/default.png': ['test/fixtures/sequence.uml'],
+          'tmp/default-napkin.png': ['test/fixtures/sequence.uml'],
+        },
+      },
       outputType_svg_options: {
         options: {
           outputType: 'svg'
