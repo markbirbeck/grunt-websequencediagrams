@@ -119,7 +119,6 @@ All of the hard word is done by [Joe Hildebrand](https://github.com/hildjj)'s [w
 
 * Allow processing of more than one file. Closes #3. Thanks to @Alexey1Gavrilov.
 
-
 2014-11-14 (v0.2.2)
 
 * Fix README to include target. Closes #1. Thanks to @chrono.
