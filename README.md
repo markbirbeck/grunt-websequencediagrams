@@ -1,6 +1,6 @@
 # grunt-websequencediagrams
 
-> Grunt plugin to allow UML sequence diagrams to be created, using WebSequenceDiagram.com.
+> Grunt plugin to allow UML sequence diagrams to be created, using WebSequenceDiagrams.com.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.4`
@@ -111,10 +111,13 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 All of the hard word is done by [Joe Hildebrand](https://github.com/hildjj)'s [websequencediagrams](https://www.npmjs.org/package/websequencediagrams) module. This module is simply a thin wrapper around it to make it Gruntable.
 
 ## Release History
+2015-01-27 (v0.3.1)
+
+* Add missing 's' to domain in README. Thanks to @Sadrak.
+
 2014-12-31 (v0.3.0)
 
 * Allow processing of more than one file. Closes #3. Thanks to @Alexey1Gavrilov.
-
 
 2014-11-14 (v0.2.2)
 
