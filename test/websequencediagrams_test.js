@@ -45,6 +45,19 @@ exports.websequencediagrams = {
 
     test.done();
   },
+  multiple_files: function(test) {
+    test.expect(2);
+
+    var actual = grunt.file.read('tmp/multiple-one.png');
+    var expected = grunt.file.read('test/expected/default.png');
+    test.equal(actual, expected, 'should generate first diagram.');
+
+    actual = grunt.file.read('tmp/multiple-two.png');
+    expected = grunt.file.read('test/expected/default.png');
+    test.equal(actual, expected, 'should generate second diagram.');
+
+    test.done();
+  },
   outputType_svg_options: function(test) {
     test.expect(1);
 
