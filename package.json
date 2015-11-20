@@ -1,7 +1,7 @@
 {
   "name": "grunt-websequencediagrams",
   "description": "Grunt plugin to allow UML sequence diagrams to be created, using WebSequenceDiagram.com.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "homepage": "https://github.com/markbirbeck/grunt-websequencediagrams",
   "author": {
     "name": "Mark Birbeck",
